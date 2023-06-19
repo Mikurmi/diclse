@@ -1,0 +1,362 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background: white;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  .header h1 {
+    font-size: 60px;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    height: 50px;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  /* .topnav input[type=submit]{
+    border-radius: 15px 50px;
+    padding: 10px;
+    margin: 5px;
+    background-color: white;
+    color: black;
+  }
+   */
+  /* Create three equal columns that floats next to each other */
+  .column-left {
+    float: left;
+    width: 50%;
+    padding-right: 10px;
+    background-color: #f1f1f1;
+  }
+  
+  .column-right {
+    float: left;
+    width: 0%;
+    background-color: #f1f1f1;
+  }
+  
+  .column {
+    float: left;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+  }
+  
+
+  /* Estilos buscador */
+  
+  @media only screen and (min-width: 575px){
+    .buscador {
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+  }
+  @media only screen and (max-width: 57px){
+    .buscador {
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 4fr);
+    }
+  }
+  @media only screen and (min-width: 1080px){
+    .buscador {
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  .item {
+    border-color: black;
+    border-width: 2px;
+    border-style: double;
+  }
+  .colec-boton {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .img_sus {
+    width: 75px;
+    height: 100px;
+    background-color: blue;
+    border-color: black;
+    border-width: 2px;
+    border-style: double;
+    margin: 5px;
+  }
+
+  .img_check {
+    width: 75px;
+    height: 100px;
+    background-color: rgb(255, 136, 0);
+    border-color: black;
+    border-width: 2px;
+    border-style: double;
+    margin: 5px;
+  }
+
+  /* Add a card effect for articles */
+  .card {
+    box-sizing: border-box;
+    height: 190px;
+    width: 300px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    margin: 5px;
+  }
+  
+  .card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+  
+  
+  /* Estilo para las imagenes */
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+    height: 100px;
+    padding: 5px;
+  }
+
+
+  /* Estilo cartas buscador*/
+
+  .card_buscador {
+    box-sizing: border-box;
+    height: 120px;
+    width: 120pxpx;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    margin: 5px;
+  }
+  
+  .card_buscador:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+
+  input[type=radio]:checked + .card_buscador {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 686px){
+    .tablas {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+  }
+  @media only screen and (max-width: 685px){
+  .tablas{
+    display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+  }
+  
+  }
+  @media only screen and (min-width: 1000px){
+    .tablas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+  }
+  
+  
+
+  /* Estilo del video */
+  video{
+    height: 150px;
+  }
+
+  .formulario{
+    text-align: center;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  
+  th {
+    background-color: #04AA6D;
+    color: white;
+  }
+  tr:hover {
+    background-color: coral;
+  }
+
+  /*Estilo boton*/
+  button, input[type=submit] {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(36, 72, 190);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color:black;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    margin: 5px;
+  }
+  
+  button:hover, input[type=submit]:hover {
+    background: rgb(2, 45, 185);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+  button:hover::before, input[type=submit]:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  button::before, input[type=submit]::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  button:active, input[type=submit]:active{
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+
+/* Style the footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+
